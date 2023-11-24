@@ -1,0 +1,74 @@
+.footer {
+	padding: 12.8rem 0;
+	border-top: 1px solid #eee;
+
+	&__logo-col {
+		display: flex;
+		flex-direction: column;
+		@include respond(tab-small) {
+			grid-column: span 3;
+		}
+	}
+
+	&__address-col {
+		@include respond(tab-small) {
+			grid-column: span 3;
+		}
+	}
+
+	&__social-links {
+		list-style: none;
+		display: flex;
+		gap: 2.4rem;
+	}
+
+	&__social-icon {
+		font-size: 2.4rem;
+	}
+
+	&__copyright {
+		font-size: 1.4rem;
+		line-height: 1.6;
+		color: #767676;
+		/*!------------------------MARGIN-TOP: auto; en un contenedor flexbox------------------------*/
+		margin-top: auto;
+		/*!---------------------------------------------------------------------------------------*/
+	}
+
+	&__logo {
+		display: block;
+		margin-bottom: 3.2rem;
+		height: 2.2rem;
+	}
+
+	&__heading {
+		font-size: 1.8rem;
+		font-weight: 500;
+		margin-bottom: 4rem;
+	}
+
+	&__contacts {
+		font-style: normal;
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+
+	&__address {
+		margin-bottom: 2.4rem;
+	}
+
+	&__nav {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+	}
+
+	&__nav-col {
+		@include respond(tab-small) {
+			grid-row: 1;
+			grid-column: span 2;
+			margin-bottom: 3.2rem;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.step {
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+	}
+	&__img-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		@include respond(phone) {
+			transform: translateY(2.4rem);
+		}
+
+		&:nth-child(2) {
+			@include respond(phone) {
+				grid-row: 1;
+			}
+		}
+
+		&:nth-child(6) {
+			@include respond(phone) {
+				grid-row: 5;
+			}
+		}
+
+		/* !------------------------------------------------ CIRCULOS ------------------------------------------------*/
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&::before {
+			width: 60%;
+			/* height: 60%; */
+			/* 60% of parent's width */
+			padding-bottom: 60%;
+			background-color: #fdf2e9;
+			z-index: -2;
+		}
+
+		&::after {
+			width: 45%;
+			padding-bottom: 45%;
+			background-color: #fae5d3;
+			z-index: -1;
+		}
+	}
+
+	&__img {
+		width: 35%;
+	}
+}

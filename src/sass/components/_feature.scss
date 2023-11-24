@@ -1,0 +1,32 @@
+.featured {
+	&__heading {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		letter-spacing: 0.75px;
+		font-weight: 500;
+		text-align: center;
+		margin-bottom: 2.4rem;
+		color: $color-grey-dark;
+	}
+	&__logos {
+		display: flex;
+		/*!------------------------ SPACE AROUND ----------------------------*/
+		justify-content: space-around;
+		/*!------------------------------------------------------------------*/
+		img {
+			height: 3.2rem;
+			/*!------------------------ FILTER Y OPACITY ------------------------*/
+			filter: brightness(0);
+			opacity: 50%;
+			/*!------------------------------------------------------------------*/
+
+			@include respond(tab-port) {
+				height: 2.4rem;
+			}
+
+			@include respond(phone) {
+				height: 1.2rem;
+			}
+		}
+	}
+}

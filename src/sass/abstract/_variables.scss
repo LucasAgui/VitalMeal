@@ -1,0 +1,61 @@
+// COLORS
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-primary: #e67e22;
+$color-primary-light: #eb984e;
+$color-primary-extra-light: #fae5d3;
+$color-primary-extra-light2: #fdf2e9;
+
+$color-primary-shade: #cf711f;
+$color-primary-shade-dark: #45260a;
+
+$color-grey-dark: #333;
+$color-grey: #555;
+$color-grey-light: #888;
+
+$color-grey-allow-white: #767676;
+$color-grey-allow-primary-light: #6f6f6f;
+
+// BOX SHADOWS
+
+$shadow-medium: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+// BORDER RADIUS
+
+$border-radius-default: 9px;
+$border-radius-medium: 11px;
+
+// LETTER SPACING
+
+$n-letter-spacing-small: -0.5px;
+$letter-spacing-small: 0.75px;
+
+// LINE HEIGHTS:
+
+$line-height-default: 1;
+$line-height-small: 1.1;
+$line-height-medium: 1.2;
+$line-height-paragraph-default: 1.5;
+$line-height-paragraph-large: 1.8;
+
+// FONT WEIGHTS
+
+$font-weights-default: 400;
+$font-weights-medium: 500;
+$font-weights-semi: 600;
+$font-weights-bold: 700;
+
+/*
+
+--- 01 TYPOGRAPHY SYSTEM
+
+-Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/

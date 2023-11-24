@@ -1,0 +1,78 @@
+.nav {
+	@include respond(tab-port) {
+		background-color: rgba(255, 255, 255, 0.9);
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		transform: translateX(100%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.5s ease-in;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+	}
+	&__list {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		gap: 4.8rem;
+
+		@include respond(tab-land) {
+			gap: 3.2rem;
+		}
+
+		@include respond(tab-port) {
+			flex-direction: column;
+			gap: 4.8rem;
+		}
+	}
+
+	&__link {
+	}
+	&__cta {
+	}
+	// MOBILE NAVIGATION
+	&__mobile {
+		display: none;
+
+		@include respond(tab-port) {
+			display: block;
+		}
+		&-btn {
+			border: none;
+			background: none;
+			cursor: pointer;
+			z-index: 9999;
+			display: none;
+			@include respond(tab-port) {
+				display: block;
+			}
+		}
+		&-icon[name='close-outline'] {
+			display: none;
+		}
+	}
+}
+
+// FUNCIONALIDAD MOBILE
+
+.nav-open nav {
+	opacity: 1;
+	pointer-events: auto;
+	visibility: visible;
+	transform: translateX(0%);
+}
+
+.nav-open .nav__mobile-icon[name='close-outline'] {
+	display: block;
+}
+
+.nav-open .nav__mobile-icon[name='menu-outline'] {
+	display: none;
+}
