@@ -22,9 +22,6 @@
 .hero .btn--full:link,
 .hero .btn--full:visited {
 	margin-right: 1.6rem;
-	@include respond(tab-small) {
-		margin-right: 0;
-	}
 }
 
 .btn--full:link,

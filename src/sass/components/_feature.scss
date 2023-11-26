@@ -12,6 +12,7 @@
 		display: flex;
 		/*!------------------------ SPACE AROUND ----------------------------*/
 		justify-content: space-around;
+		gap: 0.4rem;
 		/*!------------------------------------------------------------------*/
 		img {
 			height: 3.2rem;
@@ -22,6 +23,10 @@
 
 			@include respond(tab-port) {
 				height: 2.4rem;
+			}
+
+			@include respond(tab-small) {
+				height: 2em;
 			}
 
 			@include respond(phone) {

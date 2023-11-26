@@ -13,6 +13,12 @@ navLinks.forEach((element) => {
 	});
 });
 
+document.addEventListener('keydown', function (e) {
+	if (e.key === 'Escape') {
+		headerEl.classList.remove('nav-open');
+	}
+});
+
 ///////////////////////////////////////////////////////////
 //Change language
 

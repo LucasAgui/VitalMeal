@@ -6,7 +6,7 @@
 			name="description"
 			content="Vital Meal es una suscripción de alimentos impulsada por inteligencia artificial que te permitirá volver a comer sano los 365 días del año. Se adapta a sus gustos personales y testículos nutricionales." />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="/src/media/imgs/favicon.png" />
+		<link rel="icon" href="/src/media/imgs/favicon-512.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="manifest" href="manifest.webmanifest" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,10 +14,6 @@
 			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
 			rel="stylesheet" />
 		<link rel="stylesheet" href="src/css/style.css" />
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 		<title>Vital Meal &ndash; No cocines nunca más</title>
 	</head>
@@ -80,8 +76,12 @@
 			</nav>
 			<div class="nav__mobile">
 				<button class="nav__mobile-btn">
-					<ion-icon class="nav__mobile-icon" name="menu-outline"></ion-icon>
-					<ion-icon class="nav__mobile-icon" name="close-outline"></ion-icon>
+					<svg class="nav__mobile-icon" name="menu-outline">
+						<use href="src/media/svgs/sprite.svg#menu-open"></use>
+					</svg>
+					<svg class="nav__mobile-icon" name="close-outline">
+						<use href="src/media/svgs/sprite.svg#menu-close"></use>
+					</svg>
 				</button>
 			</div>
 		</header>
@@ -98,8 +98,10 @@
 							del año que te hará comer saludable nuevamente. Adaptado a tus
 							gustos personales y necesidades nutricionales.
 						</p>
-						<a href="#cta" class="btn btn--full">Come bien</a>
-						<a href="#how" class="btn btn--outline">Más información &darr;</a>
+						<div class="hero__cta">
+							<a href="#cta" class="btn btn--full">Come bien</a>
+							<a href="#how" class="btn btn--outline">Más información &darr;</a>
+						</div>
 						<div class="hero__delivered-meals">
 							<div class="hero__delivered-imgs">
 								<img
@@ -183,7 +185,7 @@
 						</h3>
 						<p class="step__desc">
 							<span>
-								¡No pierdas más tiempo pensando en que comer! Omnifood
+								¡No pierdas más tiempo pensando en que comer! Vital Meal
 							</span>
 							<abbr title="Inteligencia Artificial">IA</abbr>
 							<span>
@@ -247,7 +249,7 @@
 				<div class="container center-text">
 					<span class="subheading">Dietas</span>
 					<h2 class="heading-secundary">
-						Omnifood
+						Vital Meal
 						<abbr title="Inteligencia Artificial">IA</abbr>
 						elige entre más de 5,000 recetas
 					</h2>
@@ -265,16 +267,19 @@
 							<p class="meal__title">Gyozas Japonesas</p>
 							<ul class="meal__attributes">
 								<li class="meal__attribute">
-									<ion-icon class="meal__icon" name="flame-outline"></ion-icon>
+									<svg class="meal__icon meal__icon--fire">
+										<use href="src/media/svgs/sprite.svg#toolscopy"></use>
+									</svg>
 									<span>
 										<strong>650</strong>
 										<span>calorias</span>
 									</span>
 								</li>
 								<li class="meal__attribute">
-									<ion-icon
-										class="meal__icon"
-										name="restaurant-outline"></ion-icon>
+									<svg class="meal__icon meal__icon--knife">
+										<use
+											href="src/media/svgs/sprite.svg#icon-spoon-knife"></use>
+									</svg>
 									<span>
 										<span>NutriScore</span>
 										&reg;
@@ -282,7 +287,9 @@
 									</span>
 								</li>
 								<li class="meal__attribute">
-									<ion-icon class="meal__icon" name="star-outline"></ion-icon>
+									<svg class="meal__icon meal__icon--star">
+										<use href="src/media/svgs/sprite.svg#star-full"></use>
+									</svg>
 									<span>
 										<strong>4.9</strong>
 										<span>rating (537)</span>
@@ -304,16 +311,19 @@
 							<p class="meal__title">Ensalada de palta</p>
 							<ul class="meal__attributes">
 								<li class="meal__attribute">
-									<ion-icon class="meal__icon" name="flame-outline"></ion-icon>
+									<svg class="meal__icon meal__icon--fire">
+										<use href="src/media/svgs/sprite.svg#toolscopy"></use>
+									</svg>
 									<span>
 										<strong>400</strong>
 										<span>calorias</span>
 									</span>
 								</li>
 								<li class="meal__attribute">
-									<ion-icon
-										class="meal__icon"
-										name="restaurant-outline"></ion-icon>
+									<svg class="meal__icon meal__icon--knife">
+										<use
+											href="src/media/svgs/sprite.svg#icon-spoon-knife"></use>
+									</svg>
 									<span>
 										<span>NutriScore</span>
 										&reg;
@@ -321,7 +331,9 @@
 									</span>
 								</li>
 								<li class="meal__attribute">
-									<ion-icon class="meal__icon" name="star-outline"></ion-icon>
+									<svg class="meal__icon meal__icon--star">
+										<use href="src/media/svgs/sprite.svg#star-full"></use>
+									</svg>
 									<span>
 										<strong>4.8</strong>
 										<span>rating (441)</span>
@@ -334,57 +346,57 @@
 						<h3 class="heading-tertiary">Funciona con cualquier dieta:</h3>
 						<ul class="list">
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Vegetariana</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Vegana</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Pescetariano</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Sin gluten</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Sin lactosa</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Keto</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Paleo</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Baja en FODMAP</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Apto para niños</span>
 							</li>
 						</ul>
@@ -437,7 +449,7 @@
 								alt="Foto del cliente Steve Miller"
 								class="testimonials__img" />
 							<blockquote class="testimonials__text">
-								¡Omnifood es un salvavidas! Acabo de comenzar una empresa, así
+								¡Vital Meal es un salvavidas! Acabo de comenzar una empresa, así
 								que no tengo tiempo para cocinar. ¡No podría vivir él!
 							</blockquote>
 							<p class="testimonials__name">&mdash; Steve Miller</p>
@@ -449,7 +461,7 @@
 								alt="Foto del cliente Hannah Smith"
 								class="testimonials__img" />
 							<blockquote class="testimonials__text">
-								Obtuve Omnifood para toda la familia, ¡y libera mucho tiempo!
+								Obtuve Vital Meal para toda la familia, ¡y libera mucho tiempo!
 								Además, todo es orgánico y vegano y sin plástico.
 							</blockquote>
 							<p class="testimonials__name">&mdash; Hannah Smith</p>
@@ -555,19 +567,21 @@
 						</header>
 						<ul class="list">
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>1 comida al día</span>
 							</li>
 							<li class="list__item">
-								<ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Delivery gratis</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Pedidos de 11:00 a 21:00</span>
 							</li>
 							<li class="list__item">
@@ -591,9 +605,9 @@
 						</header>
 						<ul class="list">
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>
 									<strong>
 										<span>2 comidas</span>
@@ -602,9 +616,9 @@
 								</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>
 									<span>Servicio</span>
 									<strong>
@@ -613,15 +627,15 @@
 								</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Delivery gratis</span>
 							</li>
 							<li class="list__item">
-								<ion-icon
-									class="list__icon"
-									name="checkmark-outline"></ion-icon>
+								<svg class="list__icon">
+									<use href="src/media/svgs/sprite.svg#icon-checkmark"></use>
+								</svg>
 								<span>Acceso a las últimas recetas</span>
 							</li>
 						</ul>
@@ -639,7 +653,9 @@
 				<div class="container grid grid--4-cols">
 					<!-- ! ----------------- FEATURE 1  ------------------>
 					<div class="feature">
-						<ion-icon class="feature__icon" name="infinite-outline"></ion-icon>
+						<svg class="feature__icon">
+							<use href="src/media/svgs/sprite.svg#infinite"></use>
+						</svg>
 						<p class="feature__title">¡Nunca cocines de nuevo!</p>
 						<p class="feature__text">
 							Nuestras suscripciones cubren los 365 días del año, incluso los
@@ -648,7 +664,9 @@
 					</div>
 					<!-- ! ----------------- FEATURE 2  ------------------>
 					<div class="feature">
-						<ion-icon class="feature__icon" name="nutrition-outline"></ion-icon>
+						<svg class="feature__icon">
+							<use href="src/media/svgs/sprite.svg#leaf"></use>
+						</svg>
 						<p class="feature__title">Local y orgánico</p>
 						<p class="feature__text">
 							Nuestros cocineros solo utilizan productos locales, frescos y
@@ -657,7 +675,9 @@
 					</div>
 					<!-- ! ----------------- FEATURE 3  ------------------>
 					<div class="feature">
-						<ion-icon class="feature__icon" name="leaf-outline"></ion-icon>
+						<svg class="feature__icon">
+							<use href="src/media/svgs/sprite.svg#trash"></use>
+						</svg>
 						<p class="feature__title">Sin desperdicio</p>
 						<p class="feature__text">
 							Todos nuestros socios solo utilizan contenedores reutilizables
@@ -666,7 +686,9 @@
 					</div>
 					<!-- ! ----------------- FEATURE 4  ------------------>
 					<div class="feature">
-						<ion-icon class="feature__icon" name="pause-outline"></ion-icon>
+						<svg class="feature__icon">
+							<use href="src/media/svgs/sprite.svg#pause"></use>
+						</svg>
 						<p class="feature__title">Pausa en cualquier momento.</p>
 						<p class="feature__text">
 							¿Te vas de vacaciones? Simplemente pausa tu suscripción y te
@@ -699,8 +721,7 @@
 										type="text"
 										name="name"
 										placeholder="Tu nombre"
-										required
-										disabled />
+										required />
 								</div>
 								<div>
 									<label for="email">Correo electrónico</label>
@@ -741,30 +762,31 @@
 				<div class="footer__logo-col">
 					<a href="#top" class="footer__logo">
 						<img
-							src="src/media/imgs/vitalmeal-logo.png"
+							src="src/media/imgs/favicon-512.png"
 							alt="Logo de Omnifood"
-							class="logo" />
+							class="footer__logo-icon" />
 					</a>
 					<ul class="footer__social-links">
 						<li>
 							<a class="footer__link" href="#">
-								<ion-icon
-									class="footer__social-icon"
-									name="logo-instagram"></ion-icon>
+								<svg class="footer__social-icon">
+									<use href="src/media/svgs/sprite.svg#instagram"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a class="footer__link" href="#">
-								<ion-icon
-									class="footer__social-icon"
-									name="logo-facebook"></ion-icon>
+								<svg class="footer__social-icon">
+									<use
+										href="src/media/svgs/sprite.svg#facebook-with-circle"></use>
+								</svg>
 							</a>
 						</li>
 						<li>
 							<a class="footer__link" href="#">
-								<ion-icon
-									class="footer__social-icon"
-									name="logo-twitter"></ion-icon>
+								<svg class="footer__social-icon">
+									<use href="src/media/svgs/sprite.svg#twitter"></use>
+								</svg>
 							</a>
 						</li>
 					</ul>
@@ -834,6 +856,6 @@
 				</nav>
 			</div>
 		</footer>
-		<script src="/js/main.js"></script>
+		<script src="src/js/main.js"></script>
 	</body>
 </html>

@@ -17,8 +17,8 @@
 
 	@include respond(tab-port) {
 		grid-template-columns: 1fr;
-		padding: 0 8rem;
-		gap: 6.4;
+		padding: 0 2.4rem;
+		gap: 6.4rem;
 	}
 
 	@include respond(phone) {
@@ -61,6 +61,18 @@
 		font-size: 2rem;
 		line-height: 1.5;
 		margin-bottom: 4.8rem;
+	}
+
+	&__cta {
+		display: grid;
+		grid-template-columns: max-content max-content;
+		grid-auto-flow: row;
+		align-items: start;
+		justify-content: start;
+
+		@include respond(tab-port) {
+			justify-content: center;
+		}
 	}
 
 	&__delivered-meals {
@@ -155,8 +167,6 @@
 	.btn--full {
 		@include respond(tab-small) {
 			display: block;
-			width: 60%;
-			margin-bottom: 1.6rem;
 		}
 	}
 }

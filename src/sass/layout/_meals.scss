@@ -1,5 +1,5 @@
 .meals {
-	& .meal {
+	.meal {
 		box-shadow: $shadow-medium;
 		border-radius: $border-radius-medium;
 		/*!------------------------ OVERFLOW ------------------------*/
@@ -49,6 +49,18 @@
 		}
 
 		&__icon {
+			height: 2.5rem;
+			width: 2.5rem;
+			&--fire {
+				fill: #ff5e08;
+			}
+			&--knife {
+				fill: #51cf66;
+			}
+
+			&--star {
+				fill: $color-primary;
+			}
 		}
 	}
 }
